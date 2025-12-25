@@ -1,0 +1,9 @@
+api:
+  base_url: https://api.waqi.info/feed/
+  token: YOUR_API_TOKEN_HERE
+
+cities:
+  - delhi
+  - mumbai
+  - kolkata
+  - chennai
