@@ -6,10 +6,11 @@ The pipeline is designed with modularity, error handling, and real-world data is
 
 Key Features:
 
-API - based AQI extraction
-YAML -driven configuration (Cities, API)
-Robust handling of failed or incomplete API responses
-Transformation of nested JSON into flat, tabular data
-Derived AQI category (Good, Poor, Severe etc.)
-Clean CSV output suitable for analytics and BI tools
-Modular and extensible project structure
+API - based AQI extraction.
+YAML -driven configuration (Cities, API).
+Robust handling of failed or incomplete API responses.
+Transformation of nested JSON into flat, tabular data.
+Derived AQI category (Good, Poor, Severe etc.).
+Clean CSV output suitable for analytics and BI tools.
+Modular and extensible project structure.
+
