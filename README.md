@@ -14,3 +14,43 @@ Derived AQI category (Good, Poor, Severe etc.).
 Clean CSV output suitable for analytics and BI tools.
 Modular and extensible project structure.
 
+
+
+Project Architecture:
+
+ETL_Project/
+│
+├── src/
+│   ├── main.py                # Pipeline orchestration (entry point)
+│   ├── extract.py             # API data extraction
+│   ├── config_loader.py       # YAML configuration loader
+│   └── load/
+│       └── loader.py          # Load logic (CSV output)
+│
+├── transform/
+│   └── transform.py           # Data transformation logic
+│
+├── config/
+│   └── config.example.yaml    # Sample configuration (no secrets)
+│
+├── data/
+│   ├── raw/                   # Raw data (ignored in Git)
+│   └── processed/             # Processed output (ignored in Git)
+│
+│
+├── requirements.txt           # Python dependencies
+├── .gitignore                 # Git ignore rules
+└── README.md
+
+
+ETL Workflow:
+
+1. Extract: Fetch AQI data from an external API for configure cities.
+   Handle API failures gracefully. 
+
+2. Transform: Normalize nested AQI JSON response.
+   Preserve city records even when AQI data is unavailable.
+   Convert pollutant values into analytics-ready columns.
+   
+3. Load: Store processed data in a CSV file.
+   Output is suitable for Excel, BI Tools or Databases.
